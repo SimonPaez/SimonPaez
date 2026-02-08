@@ -1,0 +1,85 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"> <meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Teams | Industrial Arts Safety</title>
+<style>
+:root{--bg:#fff;--ink:#121212;--muted:#5b5b5b;--border:#d8c9a8;--btn:#7b5b1a;--max:1120px;}
+*{box-sizing:border-box;}
+body{margin:0;font-family:Georgia,"Times New Roman",Times,serif;color:var(--ink);background:var(--bg);}
+
+.nav{position:sticky;top:0;background:rgba(255,255,255,.95);border-bottom:1px solid #eee;z-index:10;}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;}
+.brand{font-weight:600;}
+.menu{display:none;}
+
+.hamburger{width:40px;height:40px;border:1px solid #eee;background:#fff;cursor:pointer;}
+.lines{width:18px;height:14px;margin:0 auto;position:relative;}
+.lines span{position:absolute;left:0;right:0;height:2px;background:var(--ink);}
+.lines span:nth-child(1){top:1px;}
+.lines span:nth-child(2){top:6px;}
+.lines span:nth-child(3){top:11px;}
+
+.mobile{display:none;background:#fff;border-top:1px solid #eee;}
+.nav.open .mobile{display:block;}
+.mobile a{display:block;padding:14px 20px;text-decoration:none;color:var(--ink);border-bottom:1px solid #f3f3f3;}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:48px 20px;}
+h1{margin:0 0 10px;font-size:clamp(30px,4vw,50px);}
+p{color:var(--muted);max-width:80ch;line-height:1.6;margin:0 0 18px;}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px;}
+.card{border:1px solid #eee;padding:16px;border-radius:12px;background:#fff;}
+.card h3{margin:0 0 6px;font-size:18px;}
+.role{margin:0 0 10px;color:var(--muted);font-size:14px;}
+.card p{margin:0;color:var(--muted);line-height:1.6;font-size:15px;}
+
+.btnrow{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;}
+.btn{border:1px solid var(--border);padding:12px 22px;text-decoration:none;color:var(--btn);font-size:14px;display:inline-block;}
+.btn:hover{background:rgba(216,201,168,.18);}
+
+@media(max-width:860px){.grid{grid-template-columns:1fr;}}
+</style></head>
+
+<body>
+<nav class="nav" id="nav">
+ <div class="nav-inner">
+  <div class="brand">Industrial Arts Safety</div>
+  <button type="button" class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+   <div class="lines"><span></span><span></span><span></span></div>
+  </button>
+ </div>
+ <div class="mobile" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="page1.html">Solution</a>
+ </div>
+</nav>
+
+<main class="wrap">
+<h1>Team</h1>
+<p>Replace these placeholders with your real team members and roles.</p>
+
+<div class="grid">
+ <div class="card"><h3>Mikee Viduya</h3><div class="role">Researcher and Answer Provider</div><p> did the homepage introduction for the website. Introducing the main problem and it's impact.</p></div>
+ <div class="card"><h3>Von Atutubo</h3><div class="role">Researcher and Answer Provider</div><p>Also did the homepage introduction for the website. Introducing the main problem and it's impact.</p></div>
+ <div class="card"><h3>Nishiko Sia</h3><div class="role">Group Leader</div><p>Worked on Managing the group and provided the solutions.</p></div>
+
+ <div class="card"><h3>Simon Paez</h3><div class="role">Editor for the website</div><p>Worked on the whole website and organized the informations.</p></div>
+ <div class="card"><h3>Justin Pineda</h3><div class="role">Answer provider</div><p>Provided answer for some parts of the website.</p></div>
+ <div class="card"><h3>Sitjar Reign</h3><div class="role">Answer provider</div><p>Worked on the solutions too along with Nishiko.</p></div>
+ <div class="card"><h3>Danah Geneta</h3><div class="role">Answer Provider</div><p>Worked on some parts of the website.</p></div>
+</div>
+
+<div class="btnrow">
+ <a class="btn" href="index.html">Back to Home</a>
+ <a class="btn" href="page1.html">Go to Solutions</a>
+</div>
+</main>
+
+<script>
+function toggleMenu(){document.getElementById("nav").classList.toggle("open");}
+document.addEventListener("click",function(e){
+ var nav=document.getElementById("nav"); if(!nav) return;
+ if(e.target.closest("#mobileMenu a")) nav.classList.remove("open");
+ if(!e.target.closest("#nav") ) nav.classList.remove("open");
+});
+</script>
+</body></html>
